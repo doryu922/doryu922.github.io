@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miss mo?</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: lightblue;
+      padding: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">Miss mo?</h1>
+  <p>#Yearner.</p>
+
+  <button onclick="Oo()">Oo</button>
+  <button onclick="Hinde()">Hinde</button>
+
+  <script>
+    function Oo() {
+      document.getElementById("title").textContent =
+        "Pero ang Tanong Miss ka ba?";
+    }
+    function Hinde() {
+      document.getElementById("title").textContent =
+        "Pero Bakit sya parin hanap hanap ng Puso mo?";
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Button Practice Website</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #eaf4ff;
+      padding: 40px;
+    }
+
+    button {
+      background-color: #26E3ED;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1555a8;
+    }
+
+    #secretMessage {
+      display: none;
+      color: green;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">Button Practice</h1>
+  <p id="message">Press a button to make something happen.</p>
+
+  <button onclick="changeText()">Change text</button>
+  <button onclick="changeColor()">Change background</button>
+  <button onclick="addOne()">Add to score</button>
+  <button onclick="toggleMessage()">Show / hide message</button>
+  <button onclick="askName()">Enter your name</button>
+
+  <p>Score: <span id="score">0</span></p>
+  <p id="secretMessage">Nice! You found the hidden message.</p>
+
+  <script>
+    let score = 0;
+
+    function changeText() {
+      document.getElementById("message").textContent =
+        "The text has changed!";
+    }
+
+    function changeColor() {
+      document.body.style.backgroundColor = "lightyellow";
+    }
+
+    function addOne() {
+      score = score + 1;
+      document.getElementById("score").textContent = score;
+    }
+
+    function toggleMessage() {
+      const secret = document.getElementById("secretMessage");
+
+      if (secret.style.display === "block") {
+        secret.style.display = "none";
+      } else {
+        secret.style.display = "block";
+      }
+    }
+
+    function askName() {
+      const name = prompt("What is your name?");
+
+      if (name) {
+        document.getElementById("title").textContent =
+          "Welcome, " + name + "!";
+      }
+    }
+  </script>
+</body>
+</html>
